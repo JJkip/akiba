@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="material-icons">menu</i></a></div>
+    <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0%);">
+      <li class="logo"><a id="logo-container" href="/" class="brand-logo">
+        <object id="front-page-logo" data="images/akibalogo.svg"></object></a></li>
+      <li class="bold active"><a href="my-savings.html" class="waves-effect waves-blue">Home</a></li>
+      <li class="bold "><a href="savings-categories.html" class="waves-effect waves-blue">Savings Categories</a></li>
+      <li class="bold "><a href="rankings.html" class="waves-effect waves-blue">Rankings</a></li>
+    </ul>
+    <nav class="blue darken-2" role="navigation">
+      <div class="nav-wrapper">
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class=' material-icons'>account_circle</i></a>
+          </li>
+        </ul>
+        <ul class="dropdown-content" id="user_dropdown">
+          <!--<li><a class="blue-text" href="#!">Profile</a></li>-->
+          <li><a class="blue-text" href="index.html">Logout</a></li>
+        </ul>
+
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="row">
+      <div class="col s6 m4">
+        <div class="card blue darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"><a href="#!" class="">52 Week Challenge</a></span>
+            <p><a href="#!">Ksh 50 Week Challenge</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m8">
+        <a class="waves-effect waves-light btn blue">Save now</a>
+        <table class="bordered striped">
+          <thead>
+          <tr>
+            <th data-field="id">Nickname</th>
+            <th data-field="name">Rank</th>
+            <th data-field="price">Points</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td>Alvin Chimpmuck</td>
+            <td>King</td>
+            <td>2102</td>
+          </tr>
+          <tr>
+            <td>Alan Ole Twala</td>
+            <td>Chief</td>
+            <td>1283</td>
+          </tr>
+          <tr>
+            <td>Chipukizi</td>
+            <td>Village Elder</td>
+            <td>5</td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer class="blue page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <span> <a style='font-weight: bold;' href="#!">Akiba</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		$('.button-collapse').sideNav();
+		$('.collapsible').collapsible();
+		$('select').material_select();
+  	});
+  </script>
+  <script>
+    $(function () {
+      Highcharts.chart('age_group_container', {
+        data: {
+          table: 'datatable'
+        },
+        chart: {
+          type: 'column',
+          backgroundColor: '#ffffff',
+
+        },
+        title: {
+          text: 'Age Group Data'
+        },
+        yAxis: {
+          allowDecimals: false,
+          title: {
+            text: 'Total'
+          }
+        },
+        tooltip: {
+          formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+                    this.point.y ;
+          },
+
+        }
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+
+      $(document).ready(function () {
+
+        // Build the chart
+        Highcharts.chart('gender_container', {
+          chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+          },
+          title: {
+            text: 'Registeblue Users'
+          },
+          tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+          },
+          plotOptions: {
+            pie: {
+              allowPointSelect: true,
+              cursor: 'pointer',
+              dataLabels: {
+                enabled: false
+              },
+              showInLegend: true
+            }
+          },
+          series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+              name: 'Male',
+              y: 56.33,
+              color: '#de182f'
+            }, {
+              name: 'Female',
+              y: 44.03,
+              color:'#fdc717',
+              sliced: true,
+              selected: true
+            }]
+          }]
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

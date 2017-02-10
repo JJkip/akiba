@@ -1,0 +1,196 @@
+header,
+main,
+footer {
+    padding-left: 240px;
+}
+
+body {
+    background: #f1f1f1 ;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+body.logo {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+main {
+    flex: 1 0 auto;
+}
+.guest-card {
+    margin-top: 0px;
+    /*background: #fff url("../images/vt-back-strip.png") no-repeat;*/
+    background-position: 0px 0px;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+ul#nav-mobile {
+    background: #FFF;
+}
+#credits li,
+#credits li a {
+    color: white;
+}
+
+#credits li a {
+    font-weight: bold;
+}
+
+.footer-copyright .container,
+.footer-copyright .container a {
+    color: #cde9ff;
+}
+
+.fab-tip {
+    position: fixed;
+    right: 85px;
+    padding: 0px 0.5rem;
+    text-align: right;
+    background-color: #323232;
+    border-radius: 2px;
+    color: #FFF;
+    width: auto;
+}
+.red-border-bottom{
+    border-bottom: 1px solid #d32f2f;
+}
+.card-transparent{
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+.side-nav {
+    width: 240px;
+}
+ul.side-nav.fixed li.logo {
+    text-align: center;
+    margin-top: 32px;
+}
+#logo-container {
+    height: 140px;
+    margin-bottom: 32px;
+}
+#front-page-logo {
+    display: inline-block;
+    height: 100%;
+    pointer-events: none;
+}
+footer.page-footer {
+    padding-top: 0px !important;
+}
+.users_img{
+    background-image: url("../images/user3.svg");
+}
+img.users-img{
+    width: 150px !important;
+}
+img.conversation-img{
+    width: 150px !important;
+}
+img.counties-img{
+    width: 130px !important;
+    padding: 10px;
+}
+rect.highcharts-point.highcharts-color-0 {
+    fill: #de182f !important;
+}
+rect.highcharts-point.highcharts-color-1{
+    fill: #fdc717 !important;
+}
+.highcharts-color-0 rect.highcharts-point {
+    fill: #de182f !important;
+}
+.highcharts-color-1 rect.highcharts-point {
+    fill: #fdc717!important;
+}
+span.badge.activity {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #de182f;
+    border-radius: 2px;
+}
+.collection a.collection-item {
+    color: #000000;
+}
+.title-text{
+    font-size: 1.24rem;
+    text-transform: uppercase;
+}
+.collection h5{
+    padding: 0 0 0 20px;
+}
+.card h5 {
+    margin: 0 0 10px;
+}
+p.summary-data {
+    font-size: 20px;
+    font-family: monospace;
+}
+.right-align{
+    float: right;
+}
+.left-align{
+    float: left;
+}
+.title-text a{
+    padding: 0 20px 0 0;
+    font-size: 16px;
+}
+a {
+    color: #ffffff;
+}
+div#login-page {
+    width: 500px;
+}
+.mg-t-lg {
+    margin-top: 40px;
+}
+img.responsive-img.valign.profile-image-login {
+    width: 180px;
+}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #de182f;
+    box-shadow: 0 1px 0 0 #de182f;
+}
+input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #de182f;
+}
+.input-field .prefix.active {
+    color: #de182f !important;
+}
+[type="checkbox"]:checked + label:before {
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 22px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #de182f;
+    border-bottom: 2px solid #de182f;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+.collapsible-body {
+    padding: 0 2rem;
+}
+.collapsible-header i {
+    width: 1.5rem;
+    font-size: 16px;
+    margin-right: 0px;
+}
